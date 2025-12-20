@@ -162,6 +162,7 @@ Nous avons réussi à déployer un cluster fonctionnel avec stockage partagé. V
     - **Add Storage :** Case cochée (lien automatique RBD).
 
 Résultat:
+![alt text]( https://github.com/Coco-LeRigolo/Proxmox-CEPH/blob/main/Image2.png "Résultat OSD")
 
 ## **D. Validation Fonctionnelle (Déploiement VM)**
 
