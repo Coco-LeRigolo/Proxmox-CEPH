@@ -8,33 +8,33 @@ Sommaire :
 
 [**1\. Architecture et Plan d'Adressage 2**](#_10111rg143cd)
 
-  - [Schéma Logique 2](#_ocrid1wnc88k)
+  - [Schéma Logique](#_ocrid1wnc88k)
 
-  - [Plan d'Adressage IP 3](#_ed7nm5xf90qg)
+  - [Plan d'Adressage IP](#_ed7nm5xf90qg)
 
-[**2\. Mise en Œuvre Technique (Accomplissements & Procédure) 4**](#_xjglbqx62ki5)
+[**2\. Mise en Œuvre Technique (Accomplissements & Procédure)**](#_xjglbqx62ki5)
 
-  - [A. Préparation des Nœuds 4](#_1azfn4xw83ig)
+  - [A. Préparation des Nœuds](#_1azfn4xw83ig)
 
-  - [B. Installation et Configuration de Ceph (Stockage Distribué) 4](#_7nqqp0ype4gm)
+  - [B. Installation et Configuration de Ceph (Stockage Distribué)](#_7nqqp0ype4gm)
 
-  - [C. Gestion du Stockage (OSD & Pools) 5](#_kstgfmzfhhsf)
+  - [C. Gestion du Stockage (OSD & Pools)](#_kstgfmzfhhsf)
 
-  - [D. Validation Fonctionnelle (Déploiement VM) 6](#_7ghhe6foh1k9)
+  - [D. Validation Fonctionnelle (Déploiement VM)](#_7ghhe6foh1k9)
 
-[**3\. Retours d'Expérience et Incidents 7**](#_f1p36qm6wi7h)
+[**3\. Retours d'Expérience et Incidents**](#_f1p36qm6wi7h)
 
-  - [Incident Majeur #1 : Corruption de Cluster (Duplication de Hostname) 7](#_6lt37pf25b12)
+  - [Incident Majeur #1 : Corruption de Cluster (Duplication de Hostname)](#_6lt37pf25b12)
 
-  - [Incident #2 : Disques invisibles pour Ceph (OSD) 8](#_2f3ty2ghnz0q)
+  - [Incident #2 : Disques invisibles pour Ceph (OSD)](#_2f3ty2ghnz0q)
 
-  - [Incident #3 : Résolution DNS (Mises à jour impossibles) 8](#_j1v9wmliq6gj)
+  - [Incident #3 : Résolution DNS (Mises à jour impossibles)](#_j1v9wmliq6gj)
 
-  - [Incident #4 : Perte d'un OSD et Résilience du Stockage 9](#_y4jvroq7mmjr)
+  - [Incident #4 : Perte d'un OSD et Résilience du Stockage](#_y4jvroq7mmjr)
 
-[**4\. Limitations et Reste à faire 9**](#_tn0zftybu501)
+[**4\. Limitations et Reste à faire**](#_tn0zftybu501)
 
-[**5\. Conclusion Générale 10**](#_pz1v068kdz88)
+[**5\. Conclusion Générale**](#_pz1v068kdz88)
 
 ## 
 
