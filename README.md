@@ -43,7 +43,7 @@ Sommaire :
 Pour ce projet, nous avons déployé une infrastructure composée de trois serveurs physiques et d'un poste d'administration, reliés via un switch central.
 
 ## **Schéma Logique**
-
+![alt text]( https://github.com/Coco-LeRigolo/Proxmox-CEPH/blob/main/Image1.png "Schéma Logique")
 
 ### 
 
