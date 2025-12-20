@@ -107,11 +107,11 @@ Nous avons réussi à déployer un cluster fonctionnel avec stockage partagé. V
     - Chemin : **Datacenter > \[Nœud\] > Ceph > Install**.
     - Sélection : Version Reef (18.2) / Repository : No-Subscription.
 2.  **Configuration du Cluster (Nœud 1 uniquement)**
-    - Chemin : Configuration > Create Configuration.
+    - Chemin : **Configuration > Create Configuration**.
     - Réseaux : Sélectionner 192.168.100.0/24 pour _Public_ et _Cluster Network_.  
         
 3.  **Ajout des Monitors (Nœuds 2 et 3)**
-    - Chemin : Ceph > Monitor > Create.
+    - Chemin : **Ceph > Monitor > Create**.
     - Action : Sélectionner le nœud courant pour atteindre le quorum de 3.
 
 **Procédure Technique : Déploiement Ceph**
@@ -124,13 +124,13 @@ Nous avons réussi à déployer un cluster fonctionnel avec stockage partagé. V
 
 **2\. Configuration du Cluster (Sur le Nœud 1 uniquement) :**
 
-- Onglet Configuration > Create Configuration.
+- Onglet **Configuration > Create Configuration**.
 - **Public Network :** 192.168.100.0/24.
 - **Cluster Network :** 192.168.100.0/24 (Même réseau sélectionné).
 
 **3\. Ajout des Monitors (Sur Nœud 2 et 3) :**
 
-- Ceph > Monitor > Create > Sélectionner le nœud courant pour atteindre le quorum de 3.
+- **Ceph > Monitor > Create >** Sélectionner le nœud courant pour atteindre le quorum de 3.
 
 ## **C. Gestion du Stockage (OSD & Pools)**
 
@@ -157,7 +157,7 @@ Nous avons réussi à déployer un cluster fonctionnel avec stockage partagé. V
     ceph-volume lvm zap /dev/sdb
     ```        
 2.  **Création du Pool (Interface Web)**
-    - Chemin : **Datacenter** > **Ceph** > **Pools** > **Create**.
+    - Chemin : **Datacenter > Ceph > Pools > Create**.
     - Paramètres : Name vm-storage, Size 3, Min. Size 2.
     - **Add Storage :** Case cochée (lien automatique RBD).
 
@@ -178,11 +178,11 @@ Cette opération a confirmé que le pool Ceph vm-storage est bien accessible en 
 
 **1\. Création de la VM :**
 
-- Create VM > Onglet Disques > Storage : Choisir **ceph-shared** (le stockage RBD créé précédemment).
+- Create **VM > Onglet Disques > Storage** : Choisir **ceph-shared** (le stockage RBD créé précédemment).
 
 **2\. Clonage :**
 
-- Clic droit sur la VM > Clone.
+- Clic droit sur la **VM > Clone**.
 - **Mode :** Full Clone (pour une copie indépendante).
 - **Target Node :** Sélection d'un autre serveur (ex: pve-armand).
     - _Résultat : La VM démarre sur le second nœud en accédant aux mêmes données réparties via le réseau._
@@ -210,7 +210,7 @@ C'est la partie la plus critique du projet. Nous avons rencontré plusieurs obst
 3.  **Retour à la normale et Jonction :**
     - Terminer l'installation et redémarrer.
     - Se connecter à la nouvelle interface web (https://192.168.100.12:8006).
-    - Aller dans **Datacenter** > **Cluster** > **Join Cluster**.
+    - Aller dans **Datacenter > Cluster > Join Cluster**.
     - Coller les informations du premier nœud et valider.
     - Résultat : Le cluster accepte le nœud car les noms sont désormais distincts.
 
@@ -221,7 +221,7 @@ C'est la partie la plus critique du projet. Nous avons rencontré plusieurs obst
 **Procédure Technique : Nettoyage Bas Niveau (CLI)**
 
 1.  **Accès au Terminal (Shell) :**
-    - Sélectionner le nœud concerné > Shell.
+    - Sélectionner le **nœud concerné > Shell**.
 2.  **Identification et Nettoyage :**
     - Identifier le disque via la commande lsblk (ex: /dev/sdb).
     - Effacer les signatures de fichiers:
@@ -237,7 +237,7 @@ C'est la partie la plus critique du projet. Nous avons rencontré plusieurs obst
     ceph-volume lvm zap /dev/sdb
     ```
 3.  **Finalisation (Interface Web) :**
-    - Retourner dans Ceph > OSD > Create: OSD.
+    - Retourner dans **Ceph > OSD > Create: OSD**.
     - Résultat : Le disque est désormais visible ("Unused") et sélectionnable.
 
 ## **Incident #3 : Résolution DNS (Mises à jour impossibles)**
@@ -268,9 +268,9 @@ C'est la partie la plus critique du projet. Nous avons rencontré plusieurs obst
 **Procédure Technique : Remplacement et Reconstruction**
 
 1.  **Suppression Logique (Interface Web) :**
-    - Aller dans Ceph > OSD.
+    - Aller dans **Ceph > OSD**.
     - Sélectionner l'OSD défaillant (down).
-    - Menu More > Destroy. (L'OSD est retiré de la configuration logicielle).
+    - Menu **More > Destroy**. (L'OSD est retiré de la configuration logicielle).
 2.  **Remise à zéro du disque (Shell) :**
 
 - Comme pour l'incident #2, le disque est bloqué. Il faut le forcer:
@@ -281,7 +281,7 @@ C'est la partie la plus critique du projet. Nous avons rencontré plusieurs obst
     - _(Note : Remplacer /dev/sda par le disque concerné)_.
 
 1.  **Recréation (Interface Web) :**
-    - Ceph > OSD > Create: OSD.
+    - **Ceph > OSD > Create: OSD**.
     - Sélectionner le disque (désormais vierge).
     - Valider.
 2.  **Observation de la Résilience :**
