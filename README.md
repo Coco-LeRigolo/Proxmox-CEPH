@@ -6,7 +6,7 @@ _Équipe : Paulin, Armand, Zakari, Maxime, Corentin_
 
 Sommaire :
 
-[**1\. Architecture et Plan d'Adressage 2**](#_10111rg143cd)
+[**1\. Architecture et Plan d'Adressage**](#_10111rg143cd)
 
   - [Schéma Logique](#_ocrid1wnc88k)
 
@@ -184,7 +184,7 @@ Cette opération a confirmé que le pool Ceph vm-storage est bien accessible en 
 
 - Clic droit sur la **VM > Clone**.
 - **Mode :** Full Clone (pour une copie indépendante).
-- **Target Node :** Sélection d'un autre serveur (ex: pve-armand).
+- **Target Node :** Sélection d'un autre serveur.
     - _Résultat : La VM démarre sur le second nœud en accédant aux mêmes données réparties via le réseau._
 
 # **3\. Retours d'Expérience et Incidents**
