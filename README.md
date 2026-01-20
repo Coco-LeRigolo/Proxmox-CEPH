@@ -279,7 +279,7 @@ C'est la partie la plus critique du projet. Nous avons rencontré plusieurs obst
 
 Faute de temps ou de matériel, certaines parties du projet initial n'ont pas pu être finalisées :
 
-1.  **Réseau dédié Ceph :** Nous faisons passer le trafic de réplication de stockage sur le même câble que le trafic utilisateur et administration. En production, cela créerait des goulots d'étranglement (latence). Il aurait fallu une seconde carte réseau par serveur.
+1.  **Résilience, Robustesse et stabilité :** Nous faisons passer le trafic de réplication de stockage sur le même câble que le trafic utilisateur et administration. En production, cela créerait des goulots d'étranglement (latence). Il aurait fallu une seconde carte réseau par serveur.
 2.  **Haute Disponibilité (HA) des VMs :** Le stockage est prêt (Ceph), mais nous n'avons pas eu le temps de configurer les _groupes HA_ pour que les VMs redémarrent automatiquement sur le Nœud 2 si le Nœud 1 s'éteint brutalement.
 3.  **Tests de charge :** Nous n'avons pas pu simuler une coupure électrique d'un nœud pendant une écriture disque pour valider la robustesse du Min_Size: 2.
 
