@@ -2,7 +2,7 @@
 
 _Équipe : Paulin, Armand, Zakari, Maxime, Corentin_
 
-**Sujet :** Mise en place d'un cluster de virtualisation haute disponibilité (3 nœuds) avec stockage distribué Ceph.
+**Introduction :** Le but ici est de mettre en place un Cluster Proxmox avec 3 appareils différents afin d'assurer une bonne resilience et une stabilité de la performance, en plus de cela un Ceph sera mis en place afin d'avoir un stockage distribué et toujours accessible même en cas de panne d'un des serveur.
 
 Sommaire :
 
