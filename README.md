@@ -103,19 +103,6 @@ Nous avons réussi à déployer un cluster fonctionnel avec stockage partagé. V
 
 **Procédure Technique : Déploiement Ceph**
 
-1.  **Installation (Via Interface Web sur chaque nœud)**
-    - Chemin : **Datacenter > \[Nœud\] > Ceph > Install**.
-    - Sélection : Version Reef (18.2) / Repository : No-Subscription.
-2.  **Configuration du Cluster (Nœud 1 uniquement)**
-    - Chemin : **Configuration > Create Configuration**.
-    - Réseaux : Sélectionner 192.168.100.0/24 pour _Public_ et _Cluster Network_.  
-        
-3.  **Ajout des Monitors (Nœuds 2 et 3)**
-    - Chemin : **Ceph > Monitor > Create**.
-    - Action : Sélectionner le nœud courant pour atteindre le quorum de 3.
-
-**Procédure Technique : Déploiement Ceph**
-
 **1\. Installation (Via Interface Web sur chaque nœud) :**
 
 - **Datacenter > \[Nœud\] > Ceph > Install**.
